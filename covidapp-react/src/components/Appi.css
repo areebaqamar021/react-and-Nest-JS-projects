@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Caveat:wght@400;500;600;700&display=swap');
+body{
+    background-color: #D3D3D3;
+    margin-top: 20px;
+   /* background-image: url('../images/virus.jpg'); */
+   background-size: cover;
+}
+.mycard{
+    max-width: 300px;
+    margin: 10px;
+    border: 2px solid grey;
+    padding: -8px;
+  }
+  .headtypo{
+    color: white;
+    font-weight: 400;
+    font-family: 'Acme', sans-serif;
+    font-size: 29px;
+  }
+  .box{
+      margin-top: 30px;
+      text-align: center;
+  }
+  .donut{
+    margin-top: 60px;
+  }
