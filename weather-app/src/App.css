@@ -9,14 +9,14 @@
   margin: auto;
   margin-bottom: 10px;
   margin-top: 1%;
-  background: linear-gradient(45deg, #FD7665 30%, #E1E0E0 90%);
+  background: linear-gradient(45deg, #cfaaa5 30%, #E1E0E0 90%);
   background-size: cover;
-  box-shadow: 5px 10px 5px 10px #fff;
+  box-shadow: 5px 10px 5px 10px #232933;
   padding: 20px;
 }
 .title {
-  color: #fff;
-  font-weight: 800;
+  color: #232933;
+  font-weight: 600;
   font-size: 30px;
 }
 .search-form {
@@ -26,6 +26,7 @@
   align-items: center;
 }
 .search-form input {
+  font-size: 20px;
   width: 90%;
   height: 40px;
   padding: 5px;
@@ -41,26 +42,26 @@
   padding: 5px;
   border: none;
   border-radius: 10px !important;
-  background: linear-gradient(45deg, #8e0e00 30%, #1f1c18 90%);
+  background: linear-gradient(45deg, #494241 30%, #886c47 90%);
   font-weight: 400;
   font-size: 18px;
   color: #fff;
   cursor: pointer;
 }
 .search-form button:hover {
-  background: linear-gradient(45deg, #FFAFBD 30%, #ffc3a0 90%);
+  background: linear-gradient(45deg, #d8939f 30%, #ffc3a0 90%);
   color: #000000;
 }
 .main-container {
   width: 100%;
   height: auto;
-  color: #fff;
+  color: #232933;
   text-align: center;
   margin-top: 30px;
 }
 .main-container h4 {
   font-size: 25px;
-  font-weight: 800;
+  font-weight: 600;
 }
 .main-container .weather-icon img {
   width: 100px;
