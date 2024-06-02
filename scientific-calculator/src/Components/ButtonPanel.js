@@ -20,4 +20,4 @@ const ButtonPanel = ({onButtonClick}) => {
   )
 }
 
-export default ButtonPanel
+export default ButtonPanel;
