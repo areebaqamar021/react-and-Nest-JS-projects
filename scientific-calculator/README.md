@@ -11,8 +11,6 @@ A comprehensive scientific calculator built with React, featuring advanced mathe
 - [Components](#components)
 - [Routing](#routing)
 - [Styling](#styling)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -35,3 +33,20 @@ To run this project locally, follow these steps:
 
    ```bash
    git clone https://github.com/your-username/scientific-calculator.git
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd scientific-calculator
+
+3. Install the dependencies:
+
+    ```bash
+    npm install
+
+4. Start the development server:
+
+   ```bash
+   npm start
+
+
