@@ -7,6 +7,7 @@ function App() {
   return (
     <Router>
       <div className="app">
+      <h1>Calculator</h1>
         <Routes>
           <Route path="/" element={<CalculatorPage />} />
         </Routes>
