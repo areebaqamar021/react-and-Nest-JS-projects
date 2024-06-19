@@ -40,3 +40,22 @@ This project demonstrates a simple authentication system using React, Firebase, 
 4. **Start the development server:**
   ```bash
   npm start
+
+## Project Structure
+
+```plaintext
+firebase-auth-react/
+├── node_modules/
+├── public/
+├── src/
+│   ├── App.js
+│   ├── firebase.js
+│   ├── index.css
+│   ├── index.js
+│   ├── LoginForm.js
+│   ├── SignUpForm.js
+│   ├── WelcomePage.js
+│   └── ...
+├── package.json
+├── README.md
+└── ...
