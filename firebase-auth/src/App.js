@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './App.css';
-import LoginForm from './components/LoginForm';
-import SignUpForm from './components/SignUpForm';
+import './index.css';
+import LoginForm from './LoginForm';
+import SignUpForm from './SignUpForm';
 
 function App() {
   const [isLogin, setIsLogin] = useState(true);
@@ -11,10 +11,8 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        {isLogin ? <LoginForm toggleForm={toggleForm} /> : <SignUpForm toggleForm={toggleForm} />}
-      </header>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      {isLogin ? <LoginForm toggleForm={toggleForm} /> : <SignUpForm toggleForm={toggleForm} />}
     </div>
   );
 }
