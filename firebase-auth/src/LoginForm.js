@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from './firebase';
+import { useNavigate } from 'react-router-dom';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const LoginForm = ({ toggleForm }) => {
@@ -8,6 +9,7 @@ const LoginForm = ({ toggleForm }) => {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,7 +17,9 @@ const LoginForm = ({ toggleForm }) => {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      alert('Logged in successfully');
+      setEmail('');
+      setPassword('');
+      navigate('/welcome');
     } catch (error) {
       switch (error.code) {
         case 'auth/invalid-email':
