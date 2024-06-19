@@ -28,9 +28,11 @@ This project demonstrates a simple authentication system using React, Firebase, 
    ```bash
    git clone https://github.com/yourusername/firebase-auth-react.git
    cd firebase-auth-react
+   
 2. **Install the dependencies:**
    ```bash
    npm install
+   
 3. **Set up Firebase:**
 
 - Create a Firebase project in the Firebase Console.
@@ -38,8 +40,8 @@ This project demonstrates a simple authentication system using React, Firebase, 
 - Copy the Firebase configuration and replace the placeholders in src/firebase.js with your Firebase project credentials.
   
 4. **Start the development server:**
-  ```bash
-  npm start
+
+  
 
 ## Project Structure
 
