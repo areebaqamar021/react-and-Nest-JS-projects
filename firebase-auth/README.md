@@ -41,7 +41,9 @@ This project demonstrates a simple authentication system using React, Firebase, 
   
 4. **Start the development server:**
 
-  
+  ```bash
+  npm start
+```
 
 ## Project Structure
 
