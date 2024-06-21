@@ -27,7 +27,7 @@ This project demonstrates a simple authentication system using React, Firebase, 
 1. **Clone the repository:**
    
    ```bash
-   git clone https://github.com/yourusername/firebase-auth.git
+   git clone https://github.com/areebaqamar021/firebase-auth.git
    cd firebase-auth
    
 3. **Install the dependencies:**
