@@ -1,10 +1,11 @@
 # React Firebase Authentication with TailwindCSS
 
-This project demonstrates a simple authentication system using React, Firebase, and TailwindCSS. It includes both login and sign-up functionality with email and password validation, along with a password visibility toggle feature, differentiated error messages, and a welcome page upon successful login.
+This project demonstrates a simple authentication system using React, Firebase, and TailwindCSS. It includes both login and sign-up functionality with email and password validation, along with Google authentication, a password visibility toggle feature, differentiated error messages, and a welcome page upon successful login.
 
 ## Features
 
 - **User Authentication**: Users can sign up and log in using their email and password.
+- **Google Sign-In**: Users can sign in with their Google account on both login and sign-up forms.
 - **Form Validation**:
   - **Email Validation**: Ensures the email format is correct.
   - **Password Validation**: Ensures the password contains at least 8 characters, one uppercase letter, one lowercase letter, one digit, and one special character.
@@ -27,7 +28,7 @@ This project demonstrates a simple authentication system using React, Firebase, 
 1. **Clone the repository:**
    
    ```bash
-   git clone https://github.com/yourusername/firebase-auth.git
+   git clone https://github.com/areebaqamar021/firebase-auth.git
    cd firebase-auth
    
 3. **Install the dependencies:**
@@ -39,8 +40,30 @@ This project demonstrates a simple authentication system using React, Firebase, 
 
 - Create a Firebase project in the Firebase Console.
 - Add a web app to your project.
+- Enable Google Sign-In in the Firebase Console.
 - Copy the Firebase configuration and replace the placeholders in src/firebase.js with your Firebase project credentials.
 
+```bash
+// src/firebase.js
+import { initializeApp } from "firebase/app";
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
+
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const googleProvider = new GoogleAuthProvider();
+
+export { auth, googleProvider };
+
+```
   
 4. **Start the development server:**
 
