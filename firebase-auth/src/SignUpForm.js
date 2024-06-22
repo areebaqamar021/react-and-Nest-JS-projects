@@ -29,18 +29,14 @@ const SignUpForm = ({ toggleForm }) => {
       setConfirmPassword('');
       navigate('/welcome');
     } catch (error) {
-      switch (error.code) {
-        case 'auth/email-already-in-use':
-          setError('Email is already in use.');
-          break;
-        case 'auth/invalid-email':
-          setError('Invalid email address.');
-          break;
-        case 'auth/weak-password':
-          setError('Password is too weak.');
-          break;
-        default:
-          setError('An error occurred. Please try again.');
+      if (error.code === 'auth/email-already-in-use') {
+        setError('Email is already in use.');
+      } else if (error.code === 'auth/invalid-email') {
+        setError('Invalid email address.');
+      } else if (error.code === 'auth/weak-password') {
+        setError('Password is too weak.');
+      } else {
+        setError('An error occurred. Please try again.');
       }
     }
   };
