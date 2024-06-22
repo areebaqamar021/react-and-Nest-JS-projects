@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from './firebase';
+import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { auth, googleProvider } from './firebase';
 import { useNavigate } from 'react-router-dom';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaEye, FaEyeSlash, FaGoogle } from 'react-icons/fa';
 
 const LoginForm = ({ toggleForm }) => {
   const [email, setEmail] = useState('');
@@ -44,6 +44,15 @@ const LoginForm = ({ toggleForm }) => {
     setShowPassword(!showPassword);
   };
 
+  const handleGoogleSignIn = async () => {
+    try {
+      await signInWithPopup(auth, googleProvider);
+      navigate('/welcome');
+    } catch (error) {
+      setError('An error occurred with Google Sign-In. Please try again.');
+    }
+  };
+
   return (
     <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
       <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
@@ -77,8 +86,14 @@ const LoginForm = ({ toggleForm }) => {
           </button>
         </div>
         {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
-        <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded">Login</button>
+        <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded mb-4">Login</button>
       </form>
+      <button
+        onClick={handleGoogleSignIn}
+        className="w-full bg-red-500 text-white p-2 rounded flex items-center justify-center"
+      >
+        <FaGoogle className="mr-2" /> Sign in with Google
+      </button>
       <p className="mt-4 text-center">
         Don't have an account? <button onClick={toggleForm} className="text-blue-500">Sign Up</button>
       </p>

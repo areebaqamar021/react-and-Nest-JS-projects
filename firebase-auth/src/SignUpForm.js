@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from './firebase';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { auth, googleProvider } from './firebase';
+import { useNavigate } from 'react-router-dom';
+import { FaEye, FaEyeSlash, FaGoogle } from 'react-icons/fa';
 
 const SignUpForm = ({ toggleForm }) => {
   const [email, setEmail] = useState('');
@@ -10,24 +11,27 @@ const SignUpForm = ({ toggleForm }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
 
     if (password !== confirmPassword) {
-      setError('Passwords do not match');
+      setError('Passwords do not match.');
       return;
     }
 
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      alert('Account created successfully');
-      toggleForm();
+      setEmail('');
+      setPassword('');
+      setConfirmPassword('');
+      navigate('/welcome');
     } catch (error) {
       switch (error.code) {
         case 'auth/email-already-in-use':
-          setError('Email already in use.');
+          setError('Email is already in use.');
           break;
         case 'auth/invalid-email':
           setError('Invalid email address.');
@@ -47,6 +51,15 @@ const SignUpForm = ({ toggleForm }) => {
 
   const toggleConfirmPasswordVisibility = () => {
     setShowConfirmPassword(!showConfirmPassword);
+  };
+
+  const handleGoogleSignIn = async () => {
+    try {
+      await signInWithPopup(auth, googleProvider);
+      navigate('/welcome');
+    } catch (error) {
+      setError('An error occurred with Google Sign-In. Please try again.');
+    }
   };
 
   return (
@@ -100,8 +113,14 @@ const SignUpForm = ({ toggleForm }) => {
           </button>
         </div>
         {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
-        <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded">Sign Up</button>
+        <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded mb-4">Sign Up</button>
       </form>
+      <button
+        onClick={handleGoogleSignIn}
+        className="w-full bg-red-500 text-white p-2 rounded flex items-center justify-center"
+      >
+        <FaGoogle className="mr-2" /> Sign up with Google
+      </button>
       <p className="mt-4 text-center">
         Already have an account? <button onClick={toggleForm} className="text-blue-500">Login</button>
       </p>
