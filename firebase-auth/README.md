@@ -43,11 +43,11 @@ This project demonstrates a simple authentication system using React, Firebase, 
 - Enable Google Sign-In in the Firebase Console.
 - Copy the Firebase configuration and replace the placeholders in src/firebase.js with your Firebase project credentials.
 
+```bash
 // src/firebase.js
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
-```bash
 const firebaseConfig = {
   apiKey: "YOUR_API_KEY",
   authDomain: "YOUR_AUTH_DOMAIN",
