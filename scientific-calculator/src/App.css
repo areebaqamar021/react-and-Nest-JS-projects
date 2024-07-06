@@ -23,7 +23,7 @@ body {
   background-color: #262626;
   color: #ffffff;
   font-size: 2rem; /* Adjusted font size */
-  padding: 15px;
+  padding: 5px;
   border-radius: 5px;
   margin-bottom: 20px;
   text-align: right;
@@ -31,6 +31,9 @@ body {
   text-overflow: ellipsis;
   height: 60px; /* Set a fixed height for the display */
   box-sizing: border-box;
+  cursor: text; /* Make it look like a text field */
+  border: none; /* Remove border */
+  outline: none; /* Remove outline */
 }
 
 /* Button panel styles */

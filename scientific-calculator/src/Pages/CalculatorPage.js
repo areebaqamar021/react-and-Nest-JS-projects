@@ -49,7 +49,7 @@ const CalculatorPage = () => {
 
   return (
     <div className="calculator-page">
-      <Display value={input} />
+      <Display value={input} onChange={setInput} />
       <ButtonPanel onButtonClick={handleButtonClick} />
     </div>
   );
