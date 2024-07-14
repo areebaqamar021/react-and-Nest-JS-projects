@@ -36,58 +36,58 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <Box sx={{ flexGrow: 1, p: 3 }}>
+    <Box sx={{ flexGrow: 1, p: 3, bgcolor: '#f0f2f5', minHeight: '100vh' }}>
+      <Typography variant="h4" gutterBottom sx={{ mb: 3, textAlign: 'center', fontWeight: 'bold', color: '#003366' }}>
+        Recruitment Metrics Dashboard
+      </Typography>
       <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <Typography variant="h4">Recruitment Metrics Dashboard</Typography>
-        </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Paper sx={{ p: 2 }}>
-            <Typography variant="h6">Time to Hire</Typography>
+          <Paper sx={{ p: 3, boxShadow: 3, borderRadius: 2 }}>
+            <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#00509e' }}>Time to Hire</Typography>
             <LineChart width={300} height={200} data={timeToHireData}>
-              <Line type="monotone" dataKey="timeToHire" stroke="#8884d8" />
+              <Line type="monotone" dataKey="timeToHire" stroke="#ff7300" strokeWidth={2} />
               <Tooltip />
               <Legend />
             </LineChart>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Paper sx={{ p: 2 }}>
-            <Typography variant="h6">Source of Hire</Typography>
+          <Paper sx={{ p: 3, boxShadow: 3, borderRadius: 2 }}>
+            <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#00509e' }}>Source of Hire</Typography>
             <PieChart width={300} height={200}>
-              <Pie dataKey="count" isAnimationActive={false} data={sourceOfHireData} cx="50%" cy="50%" outerRadius={60} fill="#82ca9d" label />
+              <Pie dataKey="count" isAnimationActive={false} data={sourceOfHireData} cx="50%" cy="50%" outerRadius={60} fill="#8884d8" label />
               <Tooltip />
             </PieChart>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Paper sx={{ p: 2 }}>
-            <Typography variant="h6">Gender Ratio</Typography>
+          <Paper sx={{ p: 3, boxShadow: 3, borderRadius: 2 }}>
+            <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#00509e' }}>Gender Ratio</Typography>
             <PieChart width={300} height={200}>
-              <Pie data={genderRatioData} dataKey="value" cx={150} cy={100} innerRadius={50} outerRadius={80} fill="#8884d8" label />
+              <Pie data={genderRatioData} dataKey="value" cx={150} cy={100} innerRadius={50} outerRadius={80} fill="#82ca9d" label />
             </PieChart>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Paper sx={{ p: 2 }}>
-            <Typography variant="h6">Offer Acceptance Ratio</Typography>
-            <Typography variant="h4" color="primary">{offerAcceptanceRatio.toFixed(2)}%</Typography>
+          <Paper sx={{ p: 3, boxShadow: 3, borderRadius: 2 }}>
+            <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#00509e' }}>Offer Acceptance Ratio</Typography>
+            <Typography variant="h4" color="primary" sx={{ fontWeight: 'bold' }}>{offerAcceptanceRatio.toFixed(2)}%</Typography>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Paper sx={{ p: 2 }}>
-            <Typography variant="h6">Application Received by Source</Typography>
+          <Paper sx={{ p: 3, boxShadow: 3, borderRadius: 2 }}>
+            <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#00509e' }}>Application Received by Source</Typography>
             <BarChart width={300} height={200} data={sourceOfHireData}>
               <XAxis dataKey="source" />
               <YAxis />
               <Tooltip />
-              <Bar dataKey="count" fill="#82ca9d" />
+              <Bar dataKey="count" fill="#ffc658" />
             </BarChart>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Paper sx={{ p: 2 }}>
-            <Typography variant="h6">Candidate Withdrawal Rate</Typography>
+          <Paper sx={{ p: 3, boxShadow: 3, borderRadius: 2 }}>
+            <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#00509e' }}>Candidate Withdrawal Rate</Typography>
             <GaugeChart id="gauge-chart" nrOfLevels={3} colors={["#FF5F6D", "#FFC371"]} arcWidth={0.3} percent={0.58} />
           </Paper>
         </Grid>
