@@ -1,5 +1,15 @@
 body {
-  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
 }
