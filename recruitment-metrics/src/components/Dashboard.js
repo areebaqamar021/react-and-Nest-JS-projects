@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Grid, Paper, Typography, Box } from '@mui/material';
-import { LineChart, Line, PieChart, Pie, Tooltip, Legend, BarChart, Bar, XAxis, YAxis } from 'recharts';
+import { LineChart, Line, PieChart, Pie, Tooltip, Legend, BarChart, Bar, XAxis, YAxis, LabelList } from 'recharts';
 import GaugeChart from 'react-gauge-chart';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
@@ -46,7 +46,7 @@ const Dashboard = () => {
             <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#00509e' }}>Time to Hire</Typography>
             <LineChart width={300} height={200} data={timeToHireData}>
               <Line type="monotone" dataKey="timeToHire" stroke="#ff7300" strokeWidth={2} />
-              <Tooltip />
+              <Tooltip contentStyle={{ backgroundColor: '#fff', border: '1px solid #ccc' }} />
               <Legend />
             </LineChart>
           </Paper>
@@ -55,8 +55,10 @@ const Dashboard = () => {
           <Paper sx={{ p: 3, boxShadow: 3, borderRadius: 2 }}>
             <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#00509e' }}>Source of Hire</Typography>
             <PieChart width={300} height={200}>
-              <Pie dataKey="count" isAnimationActive={false} data={sourceOfHireData} cx="50%" cy="50%" outerRadius={60} fill="#8884d8" label />
-              <Tooltip />
+              <Pie dataKey="count" isAnimationActive={false} data={sourceOfHireData} cx="50%" cy="50%" outerRadius={60} fill="#8884d8" label>
+                <LabelList dataKey="count" position="outside" fill="#000" />
+              </Pie>
+              <Tooltip contentStyle={{ backgroundColor: '#fff', border: '1px solid #ccc' }} />
             </PieChart>
           </Paper>
         </Grid>
@@ -64,7 +66,9 @@ const Dashboard = () => {
           <Paper sx={{ p: 3, boxShadow: 3, borderRadius: 2 }}>
             <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#00509e' }}>Gender Ratio</Typography>
             <PieChart width={300} height={200}>
-              <Pie data={genderRatioData} dataKey="value" cx={150} cy={100} innerRadius={50} outerRadius={80} fill="#82ca9d" label />
+              <Pie data={genderRatioData} dataKey="value" cx={150} cy={100} innerRadius={50} outerRadius={80} fill="#82ca9d" label>
+                <LabelList dataKey="value" position="outside" fill="#000" />
+              </Pie>
             </PieChart>
           </Paper>
         </Grid>
@@ -80,15 +84,15 @@ const Dashboard = () => {
             <BarChart width={300} height={200} data={sourceOfHireData}>
               <XAxis dataKey="source" />
               <YAxis />
-              <Tooltip />
-              <Bar dataKey="count" fill="#ffc658" />
+              <Tooltip contentStyle={{ backgroundColor: '#fff', border: '1px solid #ccc' }} />
+              <Bar dataKey="count" fill="#ffc658" label={{ fill: '#000', fontSize: 12 }} />
             </BarChart>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
           <Paper sx={{ p: 3, boxShadow: 3, borderRadius: 2 }}>
             <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#00509e' }}>Candidate Withdrawal Rate</Typography>
-            <GaugeChart id="gauge-chart" nrOfLevels={3} colors={["#FF5F6D", "#FFC371"]} arcWidth={0.3} percent={0.58} />
+            <GaugeChart id="gauge-chart" nrOfLevels={3} colors={["#FF5F6D", "#FFC371"]} arcWidth={0.3} percent={0.58} textColor="#000" />
           </Paper>
         </Grid>
       </Grid>
