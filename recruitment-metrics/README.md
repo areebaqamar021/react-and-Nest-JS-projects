@@ -1,12 +1,5 @@
 # Recruitment Metrics Dashboard
 
-## Acknowledgements
-
-- [ReactJS](https://reactjs.org/): A JavaScript library for building user interfaces.
-- [Firebase](https://firebase.google.com/): A platform developed by Google for creating mobile and web applications.
-- [Recharts](https://recharts.org/en-US/): A composable charting library built on React components.
-- [Material-UI](https://mui.com/): A popular React UI framework for building responsive web applications.
-
 ## Overview
 
 The Recruitment Metrics Dashboard is a ReactJS-based web application designed to track and analyze key recruitment metrics such as time to hire, source of hire, gender ratio, offer acceptance ratio, and candidate withdrawal rate. The application integrates with Firebase for data storage and retrieval and uses various charting libraries for data visualization.
@@ -92,6 +85,14 @@ recruitment-metrics/
 ├── .gitignore
 ├── package.json
 ├── README.md
+```
+
+## Acknowledgements
+
+- [ReactJS](https://reactjs.org/): A JavaScript library for building user interfaces.
+- [Firebase](https://firebase.google.com/): A platform developed by Google for creating mobile and web applications.
+- [Recharts](https://recharts.org/en-US/): A composable charting library built on React components.
+- [Material-UI](https://mui.com/): A popular React UI framework for building responsive web applications.
 
 ## Usage
 
