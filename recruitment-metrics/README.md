@@ -27,7 +27,7 @@ The Recruitment Metrics Dashboard is a ReactJS-based web application designed to
 
    ```bash
    git clone https://github.com/areebaqamar021/recruitment-metrics-dashboard.git
-   cd recruitment-metrics-dashboard
+   cd recruitment-metrics
    
 2. **Install dependencies:**
 
