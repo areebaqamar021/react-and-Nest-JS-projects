@@ -19,7 +19,7 @@ An intuitive job board application built with ReactJS, Tailwind CSS for styling,
 
 ## Folder Structure
 
-\```
+```plaintext
 job-board/
 ├── public/
 │   ├── index.html
@@ -46,7 +46,7 @@ job-board/
 ├── tailwind.config.js
 ├── postcss.config.js
 ├── README.md
-\```
+```
 
 ## Getting Started
 
