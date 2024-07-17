@@ -35,7 +35,6 @@ job-board/
 │   ├── features/
 │   │   ├── jobs/
 │   │   │   ├── jobsSlice.js
-│   │   │   ├── jobsAPI.js
 │   ├── pages/
 │   │   ├── HomePage.js
 │   │   ├── JobDetailPage.js
@@ -61,10 +60,10 @@ Make sure you have the following installed:
 
 1. Clone the repository:
 
-   \```bash
+   ```bash
    git clone https://github.com/your-username/job-board.git
    cd job-board
-   \```
+   ```
 
 2. Install the dependencies:
 
