@@ -17,6 +17,39 @@ An intuitive job board application built with ReactJS, Tailwind CSS for styling,
 - Tailwind CSS
 - React Router
 
+## Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js
+- npm
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/areebaqamar021/job-board.git
+   cd job-board
+   ```
+
+2. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+### Running the Application
+
+1. Start the development server:
+
+   ```bash
+   npm start
+   ```
+The application should now be running at `http://localhost:3000`.
+
 ## Folder Structure
 
 ```plaintext
@@ -46,39 +79,6 @@ job-board/
 ├── postcss.config.js
 ├── README.md
 ```
-
-## Getting Started
-
-### Prerequisites
-
-Make sure you have the following installed:
-
-- Node.js
-- npm
-
-### Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/your-username/job-board.git
-   cd job-board
-   ```
-
-2. Install the dependencies:
-
-   ```bash
-   npm install
-   ```
-
-### Running the Application
-
-1. Start the development server:
-
-   ```bash
-   npm start
-   ```
-The application should now be running at `http://localhost:3000`.
 
 ## Contributing
 
