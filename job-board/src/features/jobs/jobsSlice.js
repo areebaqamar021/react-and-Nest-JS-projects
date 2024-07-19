@@ -10,7 +10,7 @@ const initialState = {
         salary: '$13k/month',
         location: 'Remote',
         description: 'Netflix is seeking a highly skilled and motivated Backend .NET Developer...',
-        skills: ['Fullstack', 'Angular', 'Azure', 'C#']
+        skills: ['Fullstack', '.Net', 'Java', 'C#']
       },
       {
         id: 2,
