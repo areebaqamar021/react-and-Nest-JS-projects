@@ -26,13 +26,28 @@ Ensure you have the following installed:
 ### Installation
 
 1. Clone the repository:
+
    ```bash
-   git clone https://github.com/areebaqamar021/react-projects/tree/master/adviceapp
-   cd adviceapp
+   git clone https://github.com/areebaqamar021/job-board.git
+   cd job-board
    ```
-   
+
 2. Install the dependencies:
+
    ```bash
-     npm install
-  ```
-### Running the App
+   npm install
+   ```
+
+### Running the Application
+
+1. Start the development server:
+
+   ```bash
+   npm start
+   ```
+The application should now be running at `http://localhost:3000`.
+
+## Usage
+
+- Click the "Get Advice" button to fetch a new piece of advice.
+- The app will display the advice fetched from the Advice Slip API.
