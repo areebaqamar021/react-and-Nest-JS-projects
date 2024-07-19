@@ -12,7 +12,7 @@ const initialState = {
         description: 'Netflix is seeking a highly skilled and motivated Backend .NET Developer...',
         skills: ['Fullstack', 'Angular', 'Azure', 'C#']
       },
-       {
+      {
         id: 2,
         title: 'Frontend ReactJS Developer',
         companyName: 'Facebook',
@@ -32,12 +32,10 @@ const initialState = {
         salary: '$15k/month',
         applicants: 150,
       },
-      // Add more job data here
     ],
     searchTerm: '',
   };
   
-
 const jobsSlice = createSlice({
   name: 'jobs',
   initialState,
