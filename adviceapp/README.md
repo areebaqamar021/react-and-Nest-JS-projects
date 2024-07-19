@@ -28,8 +28,8 @@ Ensure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/areebaqamar021/job-board.git
-   cd job-board
+   git clone https://github.com/areebaqamar021/adviceapp.git
+   cd adviceapp
    ```
 
 2. Install the dependencies:
