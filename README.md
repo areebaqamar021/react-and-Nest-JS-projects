@@ -128,10 +128,9 @@ This repository contains various ReactJS projects demonstrating different functi
    ```
 
 2. Navigate to the project directory and install dependencies:
-
    ```bash
-  cd project-name
-  npm install
+     cd project-name
+     npm install
 
 ## Usage
 
