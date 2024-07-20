@@ -50,11 +50,12 @@
     opacity: 1;
     background-color: #ffffff;
     border: 1px solid rgba(22, 76, 167, 0.6);
+    padding: 20px;
   }
     
   .button span {
     color: #164ca7;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 500;
     letter-spacing: 0.7px;
   }
