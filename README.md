@@ -118,22 +118,22 @@ This repository contains various ReactJS projects demonstrating different functi
 - Tailwind CSS
 - React Router DOM
 
-## Installation
+### Installation
 
 1. Clone the repository:
 
    ```bash
    git clone https://github.com/areebaqamar021/react-projects.git
    cd react-projects
-  ```
+   ```
 
 2. Navigate to the project directory and install dependencies:
 
- ```bash
- cd project-name
- npm install
- ```
-## Usage
+   ```bash
+  
+   ```
+
+### Usage
 
 1. Start the development server:
 
