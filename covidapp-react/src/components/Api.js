@@ -13,12 +13,12 @@ function Api() {
     const [deaths, setDeath] = useState(0);
 
     useEffect(() => {
-        Axios.get('https://covid19.mathdro.id/api')
+        Axios.get('https://disease.sh/v3/covid-19/all')
             .then((res) => {
-                console.log(res.data);
-                setConfirmed(res.data.confirmed.value);
-                setRecovered(res.data.recovered.value);
-                setDeath(res.data.deaths.value);
+                console.log(res.data); // Check the response data
+                setConfirmed(res.data.cases);
+                setRecovered(res.data.recovered);
+                setDeath(res.data.deaths);
             })
             .catch((error) => {
                 console.error('Error fetching data:', error);
@@ -36,7 +36,7 @@ function Api() {
                     </div>
                 </Grid>
                 <Grid item xs={9}>
-                    <div className="donut">
+                    <div className="donut" style={{ width: '500px', height: '500px', marginLeft: '150px' }}>
                         <Doughnut
                             data={{
                                 labels: ['Confirmed', 'Recovered', 'Deaths'],
@@ -47,6 +47,10 @@ function Api() {
                                         data: [confirmed, recovered, deaths],
                                     },
                                 ],
+                            }}
+                            options={{
+                                responsive: true,
+                                maintainAspectRatio: false,
                             }}
                         />
                     </div>
