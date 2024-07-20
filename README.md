@@ -121,6 +121,28 @@ This repository contains various ReactJS projects demonstrating different functi
 ## Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/areebaqamar021/react-projects.git
    cd react-projects
+  ```
+
+2. Navigate to the project directory and install dependencies:
+
+ ```bash
+ cd project-name
+ npm install
+ ```
+## Usage
+
+1. Start the development server:
+
+  ```bash
+    npm start
+    ```
+
+2. Open your browser and navigate to http://localhost:3000 to see the project in action.
+
+  ## Contributing
+
+  Contributions are welcome! Please fork the repository and create a pull request with your changes.
