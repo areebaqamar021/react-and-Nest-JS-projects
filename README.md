@@ -17,7 +17,6 @@ This repository contains various ReactJS projects demonstrating different functi
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Projects
 
@@ -129,8 +128,8 @@ This repository contains various ReactJS projects demonstrating different functi
 
 2. Navigate to the project directory and install dependencies:
    ```bash
-     cd project-name
-     npm install
+   cd project-name
+   npm install
 
 ## Usage
 
