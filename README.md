@@ -118,7 +118,7 @@ This repository contains various ReactJS projects demonstrating different functi
 - Tailwind CSS
 - React Router DOM
 
-### Installation
+## Installation
 
 1. Clone the repository:
 
@@ -130,16 +130,16 @@ This repository contains various ReactJS projects demonstrating different functi
 2. Navigate to the project directory and install dependencies:
 
    ```bash
-  
-   ```
+  cd project-name
+  npm install
 
-### Usage
+## Usage
 
 1. Start the development server:
 
-  ```bash
-    npm start
-    ```
+   ```bash
+   npm start
+   ```
 
 2. Open your browser and navigate to http://localhost:3000 to see the project in action.
 
