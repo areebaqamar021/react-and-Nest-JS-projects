@@ -6,7 +6,7 @@ The Weather App is a React-based application that allows users to search for and
 ## Features
 - Search weather by city name
 - Display current weather conditions, including temperature, humidity, and weather description
-- Display weather icon corresponding to the current weather
+- Display a weather icon corresponding to the current weather
 - Loading spinner while fetching data
 
 ## Technologies Used
@@ -31,6 +31,7 @@ The Weather App is a React-based application that allows users to search for and
 3. Add your OpenWeather API key:
     - Create a `.env` file in the root directory.
     - Add your API key to the `.env` file:
+      
       ```env
       REACT_APP_WEATHER_API_KEY=your_openweather_api_key
       ```
