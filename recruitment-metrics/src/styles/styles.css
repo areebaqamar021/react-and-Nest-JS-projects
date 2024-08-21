@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.app {
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    background-color: #282c34;
+    padding: 20px;
+    color: white;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #282c34;
+    color: white;
+}
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.chart-container {
+    margin: 20px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
