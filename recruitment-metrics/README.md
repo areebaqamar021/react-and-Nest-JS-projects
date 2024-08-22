@@ -35,8 +35,8 @@ The Recruitment Metrics Dashboard is a ReactJS-based web application designed to
 
 4. **Start the application:**
 
-```bash
-npm start
+   ```bash
+   npm start
 ```
 ## Folder Structure
 
@@ -49,23 +49,23 @@ recruitment-metrics/
 │   └── favicon.ico
 ├── src/
 │   ├── api/
-│   │   └── recruitmentData.js      # API integration and data processing
+│   │   └── recruitmentData.js    
 │   ├── components/
 │   │   ├── Charts/
-│   │   │   ├── TimeToHireChart.js  # Line chart component for Time to Hire
-│   │   │   ├── SourceOfHireChart.js # Pie chart component for Source of Hire
-│   │   │   ├── GenderRatioChart.js # Pie chart component for Gender Ratio
-│   │   │   ├── OfferAcceptance.js  # Gauge chart component for Offer Acceptance
-│   │   │   ├── WithdrawalRate.js   # Gauge chart component for Withdrawal Rate
+│   │   │   ├── TimeToHireChart.js  
+│   │   │   ├── SourceOfHireChart.js 
+│   │   │   ├── GenderRatioChart.js 
+│   │   │   ├── OfferAcceptance.js  
+│   │   │   ├── WithdrawalRate.js   
 │   │   ├── Layout/
-│   │   │   ├── Header.js           # Header component
-│   │   │   └── Footer.js           # Footer component
-│   │   ├── Dashboard.js            # Main dashboard component
-│   │   ├── Dashboard.css           # CSS for styling the dashboard
-│   ├── App.js                      # Main App component
-│   ├── index.js                    # Entry point for the React app
+│   │   │   ├── Header.js           
+│   │   │   └── Footer.js           
+│   │   ├── Dashboard.js            
+│   │   ├── Dashboard.css           
+│   ├── App.js                      
+│   ├── index.js                   
 │   └── styles/
-│       └── styles.css              # Global styles (if any)
+│       └── styles.css              
 ├── .gitignore
 ├── package.json
 ├── README.md
