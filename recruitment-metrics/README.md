@@ -37,7 +37,8 @@ The Recruitment Metrics Dashboard is a ReactJS-based web application designed to
 
    ```bash
    npm start
-```
+   ```
+
 ## Folder Structure
 
 The project is organized as follows:
