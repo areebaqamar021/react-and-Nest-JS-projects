@@ -1,5 +1,5 @@
 import React from 'react';
-import { GaugeChart } from 'react-gauge-chart';
+import GaugeChart from 'react-gauge-chart';
 
 const WithdrawalRate = ({ data }) => (
     <div className="withdrawal-rate">
