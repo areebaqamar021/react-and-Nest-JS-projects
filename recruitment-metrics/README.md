@@ -2,24 +2,23 @@
 
 ## Overview
 
-The Recruitment Metrics Dashboard is a ReactJS-based web application designed to track and analyze key recruitment metrics such as time to hire, source of hire, gender ratio, offer acceptance ratio, and candidate withdrawal rate. The application integrates with Firebase for data storage and retrieval and uses various charting libraries for data visualization.
+The Recruitment Metrics Dashboard is a ReactJS-based web application designed to track and analyze key recruitment metrics such as time to hire, source of hire, gender ratio, offer acceptance ratio, and candidate withdrawal rate. The application integrates with an external API for data retrieval and uses various charting libraries for data visualization.
 
 ## Features
 
 - **Time to Hire Analysis**: Line chart showing the trend of time to hire over different periods.
 - **Source of Hire Analysis**: Pie chart illustrating the percentage contribution of various sources.
 - **Gender Ratio Analysis**: Pie chart showing the gender distribution of candidates.
-- **Offer Acceptance Ratio**: Display of the percentage of accepted offers.
+- **Offer Acceptance Ratio**: Display of the percentage of accepted offers using a gauge chart.
 - **Candidate Withdrawal Rate**: Gauge chart indicating the rate of candidate withdrawals.
 - **Responsive Design**: Ensures usability across different devices (desktops, tablets, mobile).
 
 ## Technologies Used
 
 - **ReactJS**: Front-end library for building user interfaces.
-- **Firebase**: Backend service for storing and fetching recruitment data.
+- **RandomUser API**: External API for fetching candidate data.
 - **Recharts**: Library for creating interactive charts.
-- **Material-UI**: CSS framework for responsive design and UI components.
-
+- **CSS Flexbox/Grid**: For responsive layout and styling.
 
 ## Setup and Installation
 
@@ -33,32 +32,6 @@ The Recruitment Metrics Dashboard is a ReactJS-based web application designed to
 
    ```bash
    npm install
-
-3. **Firebase Configuration:**
-
-- Go to the Firebase Console.
-- Create a new project and add a web app.
-- Copy the Firebase config object and paste it into src/firebase/config.js.
-
-```bash
-// src/firebase/config.js
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-export { db };
-```
 
 4. **Start the application:**
 
@@ -75,13 +48,24 @@ recruitment-metrics/
 │   ├── index.html
 │   └── favicon.ico
 ├── src/
+│   ├── api/
+│   │   └── recruitmentData.js      # API integration and data processing
 │   ├── components/
-│   │   ├── Dashboard.js
-│   ├── firebase.js
-│   ├── App.js
-│   ├── index.js
-│   ├── index.css
-│   └── reportWebVitals.js
+│   │   ├── Charts/
+│   │   │   ├── TimeToHireChart.js  # Line chart component for Time to Hire
+│   │   │   ├── SourceOfHireChart.js # Pie chart component for Source of Hire
+│   │   │   ├── GenderRatioChart.js # Pie chart component for Gender Ratio
+│   │   │   ├── OfferAcceptance.js  # Gauge chart component for Offer Acceptance
+│   │   │   ├── WithdrawalRate.js   # Gauge chart component for Withdrawal Rate
+│   │   ├── Layout/
+│   │   │   ├── Header.js           # Header component
+│   │   │   └── Footer.js           # Footer component
+│   │   ├── Dashboard.js            # Main dashboard component
+│   │   ├── Dashboard.css           # CSS for styling the dashboard
+│   ├── App.js                      # Main App component
+│   ├── index.js                    # Entry point for the React app
+│   └── styles/
+│       └── styles.css              # Global styles (if any)
 ├── .gitignore
 ├── package.json
 ├── README.md
@@ -90,15 +74,13 @@ recruitment-metrics/
 ## Acknowledgements
 
 - [ReactJS](https://reactjs.org/): A JavaScript library for building user interfaces.
-- [Firebase](https://firebase.google.com/): A platform developed by Google for creating mobile and web applications.
+- [RandomUser API](https://randomuser.me/): API used for simulating recruitment data.
 - [Recharts](https://recharts.org/en-US/): A composable charting library built on React components.
-- [Material-UI](https://mui.com/): A popular React UI framework for building responsive web applications.
+- [CSS Tricks](https://css-tricks.com/): For responsive design patterns.
 
 ## Usage
 
 - **Dashboard Overview**: Displays summary statistics and key metrics.
 - **Interactive Charts**: Provides visual insights into various recruitment metrics.
-- **Filters and Search**: Allows filtering data by date range, job position, department, or specific metrics.
-
-
+- **Responsive Design**: Optimized for viewing on both mobile and desktop devices.
 
