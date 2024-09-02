@@ -76,14 +76,14 @@ This repository contains various ReactJS projects demonstrating different functi
 
 ### Recruitment Metrics Tracker
 
-**Description**: A web app to track and analyze recruitment metrics like time to hire, source of hire, and candidate quality. It provides detailed analytics and visualizations.
+**Description**: A web application designed to track and analyze recruitment metrics such as time to hire, source of hire, gender ratio, offer acceptance rate, and candidate withdrawal rate. It provides detailed analytics and visualizations.
 
-**Technologies**: ReactJS, Firebase, Chart.js
+**Technologies**: ReactJS, RandomUser API, Recharts, CSS Flexbox/Grid
 
 **Features**:
 - Track key recruitment metrics
 - Data visualization and analytics
-- Firebase integration for data storage
+- Responsive Design
 
 ### Scientific Calculator
 
