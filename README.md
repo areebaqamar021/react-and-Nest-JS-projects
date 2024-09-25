@@ -13,15 +13,15 @@ This repository contains various ReactJS projects demonstrating different functi
   - [Recruitment Metrics Tracker](#recruitment-metrics-tracker)
   - [Scientific Calculator](#scientific-calculator)
   - [Weather App](#weather-app)
-- [NestJS Projects]
-  - (#nestjs-projects)
+- [NestJS Projects](#nestjs-projects)
   - [CRUD Operations](#crud-operations)
+  - [Relations](#relations)
 - [Technologies](#technologies)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 
-## Projects
+## React Projects
 
 ### Advice App
 
