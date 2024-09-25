@@ -1,6 +1,7 @@
-# React Projects
+# React and NestJS Projects
 
-This repository contains various ReactJS projects demonstrating different functionalities and integrations. Each project is built to showcase specific features and technologies within the React ecosystem.
+This repository contains a collection of ReactJS and NestJS projects showcasing various features and functionalities. Below is a list of the projects and a brief description.
+
 
 ## Table of Contents
 
@@ -143,10 +144,13 @@ This repository contains various ReactJS projects demonstrating different functi
 ## Technologies
 
 - ReactJS
+- NestJS
 - Redux
 - Firebase
 - Material-UI
 - REST APIs
+- TypeORM
+- MySQL
 - Tailwind CSS
 - React Router DOM
 
