@@ -126,8 +126,6 @@ This repository contains a collection of ReactJS and NestJS projects showcasing 
 - MySQL database integration.
 - Postman for testing the endpoints.
 
----
-
 ### Relations
 
 **Description**: A NestJS project that focuses on managing entity relations such as One-to-One, One-to-Many, and Many-to-Many relationships in a MySQL database using TypeORM.
