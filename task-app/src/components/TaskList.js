@@ -9,10 +9,11 @@ const TaskList = () => {
             return;
         }
        setTasks([...tasks, input])
-       setTasks(''); 
+       setInput(''); 
     }
   return (
     <div>
+        <div>
       <input 
       type="text"
       value={input}
@@ -22,6 +23,14 @@ const TaskList = () => {
       <button onClick={addTask}>
         Add
       </button>
+      </div>
+      <ul>
+          {tasks.map((t, index) => (
+            <li key={index} className="bg-gray-50 p-3 mb-2 rounded">
+              {t}
+            </li>
+          ))}
+        </ul>
     </div>
   )
 }
