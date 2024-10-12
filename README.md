@@ -1,10 +1,11 @@
-# React Projects
+# React and NestJS Projects
 
-This repository contains various ReactJS projects demonstrating different functionalities and integrations. Each project is built with a focus on showcasing specific features and technologies within the React ecosystem.
+This repository contains a collection of ReactJS and NestJS projects showcasing various features and functionalities. Below is a list of the projects and a brief description.
+
 
 ## Table of Contents
 
-- [Projects](#projects)
+- [React Projects](#react-projects)
   - [Advice App](#advice-app)
   - [COVID-19 Tracker](#covid-19-tracker)
   - [E-commerce App](#e-commerce-app)
@@ -13,12 +14,15 @@ This repository contains various ReactJS projects demonstrating different functi
   - [Recruitment Metrics Tracker](#recruitment-metrics-tracker)
   - [Scientific Calculator](#scientific-calculator)
   - [Weather App](#weather-app)
+- [NestJS Projects](#nestjs-projects)
+  - [CRUD Operations](#crud-operations)
+  - [Relations](#relations)
 - [Technologies](#technologies)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 
-## Projects
+## React Projects
 
 ### Advice App
 
@@ -107,13 +111,44 @@ This repository contains various ReactJS projects demonstrating different functi
 - Displays weather details and forecasts
 - User-friendly interface
 
+---
+
+## NestJS Projects
+
+### CRUD Operations
+
+**Description**: This project demonstrates basic CRUD (Create, Read, Update, Delete) operations using NestJS. It covers the creation of RESTful APIs to manage data with a MySQL database.
+
+**Technologies**: NestJS, TypeORM, MySQL, Postman
+
+**Features**:
+- Basic CRUD functionality for managing entities.
+- MySQL database integration.
+- Postman for testing the endpoints.
+
+### Relations
+
+**Description**: A NestJS project that focuses on managing entity relations such as One-to-One, One-to-Many, and Many-to-Many relationships in a MySQL database using TypeORM.
+
+**Technologies**: NestJS, TypeORM, MySQL, Postman
+
+**Features**:
+- Demonstrates various relational database models.
+- Efficient data management and querying with relations.
+- Postman tests for validating the relations.
+
+---
+
 ## Technologies
 
 - ReactJS
+- NestJS
 - Redux
 - Firebase
 - Material-UI
 - REST APIs
+- TypeORM
+- MySQL
 - Tailwind CSS
 - React Router DOM
 
