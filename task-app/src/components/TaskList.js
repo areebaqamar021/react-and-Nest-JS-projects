@@ -2,7 +2,8 @@ import { useState } from "react"
 
 const TaskList = () => {
     const [tasks, setTasks] = useState([]);
-    const [input, setInput] =useState('');
+    const [input, setInput] = useState('');
+    const [editIndex, setEditIndex] = useState(null);
 
     const addTask = () => {
         if(input.trim() === ''){
@@ -10,6 +11,16 @@ const TaskList = () => {
         }
        setTasks([...tasks, input])
        setInput(''); 
+    }
+
+    const updateTask = () => {
+      if(input.trim() === '' || editIndex === null) return;
+      const updatedTasks = tasks.map((t, index) =>
+        index === editIndex ? input : t               
+      );  
+      setTasks(updatedTasks);
+      setTasks('');
+      setEditIndex(null);
     }
   return (
     <div>
