@@ -16,12 +16,18 @@ const TaskList = () => {
     const updateTask = () => {
       if(input.trim() === '' || editIndex === null) return;
       const updatedTasks = tasks.map((t, index) =>
-        index === editIndex ? input : t               
+        index === editIndex ? input : t
       );  
       setTasks(updatedTasks);
-      setTasks('');
+      setInput('');
       setEditIndex(null);
     }
+
+    const startEditTasks = (index) => {
+      setInput(tasks[index]);
+      setEditIndex(index);
+    }
+
   return (
     <div>
         <div>
@@ -31,14 +37,22 @@ const TaskList = () => {
       onChange={(e) => setInput(e.target.value)}
       placeholder="Enter a Task"
       />
-      <button onClick={addTask}>
+      {editIndex !== null ? (
+        <button onClick={updateTask}>Update Task</button>
+      ) : (
+        <button onClick={addTask}>
         Add
       </button>
+      )
+
+      }
+  
       </div>
       <ul>
           {tasks.map((t, index) => (
             <li key={index} className="bg-gray-50 p-3 mb-2 rounded">
-              {t}
+              <span>{t}</span>
+              <button className="ml-2" onClick={() => startEditTasks(index)}>Edit</button>
             </li>
           ))}
         </ul>
