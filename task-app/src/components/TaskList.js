@@ -36,7 +36,7 @@ const TaskList = () => {
     }
 
   return (
-    <div>
+    <div className="max-w-lg mx-auto p-5">
         <div>
       <input 
       type="text"
