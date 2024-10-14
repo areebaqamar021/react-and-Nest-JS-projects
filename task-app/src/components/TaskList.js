@@ -28,6 +28,13 @@ const TaskList = () => {
       setEditIndex(index);
     }
 
+    const deleteTask = (index) => {
+      tasks[index] = null;
+
+      const updatedTasks = tasks.filter(input => input !== null);
+      setTasks(updatedTasks)
+    }
+
   return (
     <div>
         <div>
@@ -53,6 +60,7 @@ const TaskList = () => {
             <li key={index} className="bg-gray-50 p-3 mb-2 rounded">
               <span>{t}</span>
               <button className="ml-2" onClick={() => startEditTasks(index)}>Edit</button>
+              <button className="ml-2" onClick={() => deleteTask(index)}>Delete</button>
             </li>
           ))}
         </ul>
