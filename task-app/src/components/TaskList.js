@@ -29,9 +29,7 @@ const TaskList = () => {
   };
 
   const deleteTask = (index) => {
-    tasks[index] = null;
-
-    const updatedTasks = tasks.filter((input) => input !== null);
+    const updatedTasks = tasks.filter((_,i) => i !== index);
     setTasks(updatedTasks);
   };
 
