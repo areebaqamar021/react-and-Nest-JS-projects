@@ -13,7 +13,7 @@ import { Pharmacy } from './pharmacy/pharmacy.entity';
       password: '', 
       database: 'pharmacy_db', 
       entities: [Pharmacy],
-      synchronize: true,
+      synchronize: false,
     }),
     PharmacyModule,
   ],
