@@ -30,7 +30,7 @@ const items: MenuItem[] = [
     key: 'about',
   },
   {
-    label: <Link href='/contact'>Contacts</Link>,
+    label: <Link href='/contact'>Contact</Link>,
     key: 'contacts',
   },
 ];
