@@ -18,11 +18,11 @@ const items: MenuItem[] = [
     key: 'posts',
   },
   {
-    label: <Link href='/'>Issues</Link>,
+    label: <Link href=''>Issues</Link>,
     key: 'issues',
   },
   {
-    label: <Link href='/'>Announcements</Link>,
+    label: <Link href=''>Announcements</Link>,
     key: 'announcements',
   },
   {
