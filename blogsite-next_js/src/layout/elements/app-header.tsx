@@ -18,6 +18,14 @@ const items: MenuItem[] = [
     key: 'posts',
   },
   {
+    label: <Link href='/'>Issues</Link>,
+    key: 'issues',
+  },
+  {
+    label: <Link href='/'>Announcements</Link>,
+    key: 'announcements',
+  },
+  {
     label: <Link href='/about'>About</Link>,
     key: 'about',
   },
