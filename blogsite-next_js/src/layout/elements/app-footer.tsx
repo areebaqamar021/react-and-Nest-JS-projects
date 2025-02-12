@@ -4,7 +4,7 @@ import { FacebookOutlined, TwitterOutlined, InstagramOutlined, PinterestOutlined
 export default function AppFooter() {
   return (
     <footer className="bg-gray-50 p-8 text-center border-t border-gray-300">
-      {/* Social Icons */}
+      
       <div className="flex justify-center space-x-4 mb-4">
         <a href="#" aria-label="Pinterest" className="text-gray-600 hover:text-gray-800">
           <PinterestOutlined style={{ fontSize: "24px" }} />
@@ -20,20 +20,16 @@ export default function AppFooter() {
         </a>
       </div>
 
-      {/* Logo */}
       <div className="flex justify-center items-center mb-4">
-<Image src={"/images/logo.png"} alt='' width={100} height={100} />
+        <Image src={"/images/logo.png"} alt='' width={100} height={100} />
       </div>
 
-      {/* Contact Info */}
       <p className="text-gray-600">info@loremipsum.com</p>
 
-      {/* Footer Text */}
       <p className="mt-4 text-gray-500">
         Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry Lorem Ipsum
       </p>
 
-      {/* Divider */}
       <div className="border-t border-gray-300 mt-4 pt-4">
         <p className="text-gray-500 text-sm">
           Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry Lorem Ipsum
