@@ -1,12 +1,17 @@
+"use client"
 import React from 'react';
 import { Card } from 'antd';
+import { IPost } from '@src/apis';
+import Link from 'next/link';
 
-const PostCard = () => (
-  <Card title="Card title">
-    <Card type="inner" title="Inner Card title" extra={<a href="#">More</a>}>
-      Inner Card content
+function PostCard({ post }: { post: IPost }) {
+  return (
+    <Card title={post.title}>
+      <Card type="inner" title="Post Details" extra={<Link href={`/posts/${post.id}`}>More</Link>}>
+        {post.body}
+      </Card>
     </Card>
-  </Card>
-);
+  );
+}
 
 export default PostCard;
