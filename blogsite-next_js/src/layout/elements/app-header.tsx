@@ -1,9 +1,10 @@
-import { Button, Layout, Space } from 'antd';
+import { Avatar, Button, Dropdown, Layout, Space } from 'antd';
 import React from 'react';
 import type { MenuProps } from 'antd';
 import { Menu } from 'antd';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useGetUser } from '@src/apis';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -34,7 +35,8 @@ const items: MenuItem[] = [
     key: 'contacts',
   },
 ];
-function AppHeader() {
+function AppHeader({ onLogout }: { onLogout: () => Promise<void> }) {
+  const { data: user } = useGetUser()
   return (
     <Header className='bg-white flex items-center h-20'>
       <Image src={"/images/logo.png"} alt='' width={100} height={100} />
@@ -52,13 +54,21 @@ function AppHeader() {
             height={10}
           />
         </Button>
-        <Button
-          shape="circle"
-          type="text"
-          className="text-xl font-semibold"
-        >
-          Login
-        </Button>
+        {user ? (
+          <Dropdown menu={{ items: [{ key: "logout", label: "Logout", onClick: onLogout }] }}>
+            <Avatar src={user.image} />
+          </Dropdown>
+        ) : (
+          <Link href="/login">
+            <Button
+              shape="circle"
+              type="text"
+              className="text-xl font-semibold"
+            >
+              Login
+            </Button>
+          </Link>
+        )}
       </Space>
     </Header>
   )

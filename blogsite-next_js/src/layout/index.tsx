@@ -6,11 +6,11 @@ import AppFooter from './elements/app-footer';
 
 const { Content } = Layout;
 
-function AppLayout({ children }: { children: ReactNode}) {
+function AppLayout({ children, onLogout }: { children: ReactNode, onLogout: () => Promise<void> }) {
   return (
     <div>
       <Layout className='h-full'>
-        <AppHeader />
+        <AppHeader onLogout={onLogout}/>
         <Content>{children}</Content>
         <AppFooter/>
       </Layout>
