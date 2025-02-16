@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import AppLayout from "@src/layout";
 import { Providers } from "@src/components";
+import { signOut } from "@src/lib";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +18,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <Providers>
-          <AppLayout>
+          <AppLayout onLogout={async () => {
+            "use server"
+            await signOut({ redirectTo: "/" })
+          }}>
             {children}
           </AppLayout>
         </Providers>
